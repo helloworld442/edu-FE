@@ -3,42 +3,41 @@ import { device } from "../../utils/media";
 import CategoryItem from "./CategoryItem";
 
 const categoryData = [
-  { categoryId: 1, categoryName: "컴퓨터", categoryDesc: "요즘 뜨고 있는 IT" },
+  {
+    categoryId: 1,
+    categoryName: "React",
+    categoryDesc: "프론트엔드의 근본인",
+  },
   {
     categoryId: 2,
-    categoryName: "경영",
-    categoryDesc: "사람들에게 많이 사랑받고 있는",
+    categoryName: "JavaScript",
+    categoryDesc: "웹 개발자에게 필수인",
   },
   {
     categoryId: 3,
-    categoryName: "교육",
-    categoryDesc: "많은 인재를 발굴하기 위한",
+    categoryName: "CSS",
+    categoryDesc: "스타일링의 근본인",
   },
   {
     categoryId: 4,
-    categoryName: "자연과학",
-    categoryDesc: "찐 이과들에 성지인",
+    categoryName: "HTML",
+    categoryDesc: "많은 사람들에게 알려진",
   },
   {
     categoryId: 5,
-    categoryName: "의학",
-    categoryDesc: "많은 사람들을 살리기 위한",
+    categoryName: "Node Js",
+    categoryDesc: "요즘 핫하게 뜨고 있는",
   },
-  { categoryId: 6, categoryName: "공학", categoryDesc: "찐 공학도에게 성지인" },
+  { categoryId: 6, categoryName: "Spring", categoryDesc: "백엔드의 근본인" },
   {
     categoryId: 7,
-    categoryName: "e 스포츠",
-    categoryDesc: "많은 학생들에게 관심받고 있는",
+    categoryName: "Java",
+    categoryDesc: "백엔드라면 꼭 알아야 할",
   },
   {
     categoryId: 8,
-    categoryName: "경제",
-    categoryDesc: "요즘 대세 주식에 대한",
-  },
-  {
-    categoryId: 9,
-    categoryName: "심리",
-    categoryDesc: "따듯한 마음씨를 가꿀 수 있는",
+    categoryName: "Kotlin",
+    categoryDesc: "안드라드라면 꼭 알아야 할",
   },
 ];
 

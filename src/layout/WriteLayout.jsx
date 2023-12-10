@@ -1,18 +1,12 @@
 import styled from "styled-components";
 import { device } from "../utils/media";
 import Header from "../components/@common/Header";
-import PostsTemplate from "../components/Posts/PostsTemplate";
-import PostsMain from "../components/Posts/PostsMain";
-import PostsAside from "../components/Posts/PostsAside";
 
-export default function PostsLayout() {
+export default function WriteLayout({ children }) {
   return (
     <Layout>
       <Header />
-      <PostsTemplate>
-        <PostsMain />
-        <PostsAside />
-      </PostsTemplate>
+      {children}
     </Layout>
   );
 }
@@ -20,7 +14,7 @@ export default function PostsLayout() {
 const Layout = styled.div`
   position: relative;
   left: 50%;
-  width: 1100px;
+  width: 1150px;
   height: auto;
   padding: 0 36px;
   box-sizing: border-box;

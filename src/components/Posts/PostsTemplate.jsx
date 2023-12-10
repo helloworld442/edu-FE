@@ -6,12 +6,14 @@ export default function PostsTemplate({ children }) {
 }
 
 const StPostsTemplate = styled.main`
-  width: 930px;
-  margin-top: 24px;
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
 
   @media ${device.tablet} {
     width: 100%;
-    display: flex;
+    margin-top: 24px;
     flex-direction: column;
     gap: 48px;
   }

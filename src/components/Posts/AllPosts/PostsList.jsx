@@ -1,21 +1,20 @@
 import styled from "styled-components";
 import PostsItem from "./PostsItem";
-import { usePosts } from "../PostsList";
+import usePosts from "../../../hooks/usePosts";
 
 export default function PostsList() {
   const posts = usePosts();
 
   return (
-    <StPostList>
+    <StPostsList>
       {posts.map((post) => (
         <PostsItem key={post.id} post={post} />
       ))}
-    </StPostList>
+    </StPostsList>
   );
 }
 
-const StPostList = styled.ul`
-  margin: 18px 0;
+const StPostsList = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 14px;

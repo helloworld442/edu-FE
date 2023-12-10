@@ -6,7 +6,7 @@ export default function CategoryHead() {
     <StCategoryHead>
       <CategoryHeadTitle>
         <span>카테고리</span>
-        학교에서는 듣지 못하는 여러 교육 정보의
+        개발자들 사이에서 중요한 코드리뷰의
         <br /> 카테고리를 소개합니다.
       </CategoryHeadTitle>
     </StCategoryHead>
@@ -32,7 +32,7 @@ const CategoryHeadTitle = styled.h1`
     font-size: 0.95rem;
     font-weight: 550;
     font-family: "Noto Sans KR";
-    color: #ffa500;
+    color: rgb(64, 58, 107, 0.8);
   }
 
   @media ${device.tablet} {

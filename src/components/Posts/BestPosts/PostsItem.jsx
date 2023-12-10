@@ -1,22 +1,23 @@
 import styled from "styled-components";
 import { device } from "../../../utils/media";
 
-export default function PostsItem({ post }) {
+export default function PostsItem({ post, index }) {
   return (
     <StPostsItem>
+      <PostsItemId>{index + 1}</PostsItemId>
       <PostsItemTitle href={"/post/" + post.id}>{post.title}</PostsItemTitle>
       <PostsItemContent>{post.question}</PostsItemContent>
       <PostsItemUser>
         <span></span>
-        <h4>{post.nickname}</h4>
-        <h5>{new Date(post.createdAt).toLocaleDateString("ko-KR")}</h5>
+        <h4>김민승</h4>
+        <h5>2023.08.12</h5>
       </PostsItemUser>
       <PostsItemInfo>
         <h6>
-          추천 <span>{post.heartCount}</span>
+          추천 <span>1</span>
         </h6>
         <h6>
-          조회 <span>{post.views}</span>
+          조회 <span>2</span>
         </h6>
       </PostsItemInfo>
     </StPostsItem>
@@ -36,24 +37,38 @@ const StPostsItem = styled.li`
   }
 `;
 
+const PostsItemId = styled.span`
+  float: left;
+  position: relative;
+  left: 4px;
+  top: -3px;
+  margin-right: 16px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(102, 103, 171, 0.8);
+`;
+
 const PostsItemTitle = styled.a`
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 80%;
+  padding-bottom: 10px;
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 550;
   font-size: 16px;
   color: rgb(20, 22, 23);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 
   &:hover {
-    color: #ffa500;
+    color: rgb(102, 103, 171, 1);
     cursor: pointer;
   }
 `;
 
 const PostsItemContent = styled.h5`
-  width: 88%;
+  width: 80%;
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;

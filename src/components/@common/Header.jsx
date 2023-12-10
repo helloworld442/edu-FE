@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <StHeader>
       <HeaderNav>
-        <HeaderLogo href="/">오소리</HeaderLogo>
+        <HeaderLogo href="/">별무리</HeaderLogo>
 
         <HeaderMenu>
           <a href="/category" className={getActive("/category")}>
@@ -80,7 +80,7 @@ const HeaderPath = styled.pre`
 const HeaderLogo = styled.a`
   font-size: 1.25rem;
   font-weight: 300;
-  color: #ffa500;
+  color: rgb(102, 103, 171, 0.8);
   cursor: pointer;
 `;
 
@@ -95,7 +95,7 @@ const HeaderMenu = styled.ul`
   cursor: pointer;
 
   .active {
-    color: #ffa500;
+    color: rgb(102, 103, 171, 0.8);
   }
 `;
 

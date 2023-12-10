@@ -21,10 +21,10 @@ const StCategoryItem = styled.li`
   border-radius: 18px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  background: #ffbb3f;
+  background: rgb(102, 103, 171, 0.8);
 
   &:nth-child(2) {
-    background: #ffa500;
+    background: rgb(64, 58, 107, 0.8);
   }
 
   &:hover {

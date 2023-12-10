@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/media";
+import { device } from "../../../utils/media";
 
 export default function PostsItem({ post }) {
   return (
@@ -8,17 +8,13 @@ export default function PostsItem({ post }) {
       <PostsItemContent>{post.question}</PostsItemContent>
       <PostsItemUser>
         <span></span>
-        <h4>{post.nickname}</h4>
-        <h5>{new Date(post.createdAt).toLocaleDateString("ko-KR")}</h5>
+        <h4>김민승</h4>
+        <h5>2023.08.12</h5>
       </PostsItemUser>
-      <PostsItemInfo>
-        <h6>
-          추천 <span>{post.heartCount}</span>
-        </h6>
-        <h6>
-          조회 <span>{post.views}</span>
-        </h6>
-      </PostsItemInfo>
+      <PostsItemPoint>
+        <span>0</span>
+        <h5>포인트</h5>
+      </PostsItemPoint>
     </StPostsItem>
   );
 }
@@ -26,7 +22,7 @@ export default function PostsItem({ post }) {
 const StPostsItem = styled.li`
   position: relative;
   width: 680px;
-  height: 210px;
+  height: 200px;
   padding: 36px 0;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(228, 235, 240);
@@ -47,13 +43,13 @@ const PostsItemTitle = styled.a`
   color: rgb(20, 22, 23);
 
   &:hover {
-    color: #ffa500;
+    color: rgb(102, 103, 171, 1);
     cursor: pointer;
   }
 `;
 
 const PostsItemContent = styled.h5`
-  width: 88%;
+  width: 70%;
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
@@ -61,7 +57,7 @@ const PostsItemContent = styled.h5`
   color: rgb(95, 102, 107);
   line-height: 1.3rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 `;
@@ -98,22 +94,29 @@ const PostsItemUser = styled.div`
   }
 `;
 
-const PostsItemInfo = styled.div`
+const PostsItemPoint = styled.div`
   position: absolute;
-  bottom: 36px;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 110px;
+  border: 2px solid #e8e8e8;
+  border-radius: 50%;
+  font-weight: 300;
+  color: #333;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 12px;
 
-  h6 {
-    font-size: 0.725rem;
-    font-weight: 500;
-    font-family: "Noto Sans KR";
-    color: rgb(157, 167, 174);
+  span {
+    font-size: 1.4rem;
+    color: rgb(102, 103, 171, 0.8);
   }
 
-  span {
-    color: rgb(102, 103, 171, 1);
+  h5 {
+    font-size: 1rem;
   }
 `;

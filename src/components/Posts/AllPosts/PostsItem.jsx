@@ -47,7 +47,7 @@ const PostsItemTitle = styled.a`
   color: rgb(20, 22, 23);
 
   &:hover {
-    color: #ffa500;
+    color: rgb(102, 103, 171, 0.8);
     cursor: pointer;
   }
 `;
