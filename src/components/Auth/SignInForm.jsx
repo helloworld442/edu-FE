@@ -14,9 +14,7 @@ export default function SignInForm() {
   const loginMutation = useMutation(loginUser, {
     onSuccess: () => {
       queryClient.invalidateQueries("user");
-    },
-    onError: (error) => {
-      console.log(error.data);
+      window.history.back();
     },
   });
 

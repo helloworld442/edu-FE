@@ -14,7 +14,7 @@ const StPostsTemplate = styled.main`
   @media ${device.tablet} {
     width: 100%;
     margin-top: 24px;
-    flex-direction: column;
-    gap: 48px;
+    flex-direction: column-reverse;
+    gap: 36px;
   }
 `;

@@ -75,6 +75,7 @@ export default function SignUpForm() {
 
 const StSignUpForm = styled.form`
   width: 730px;
+  margin: 14px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

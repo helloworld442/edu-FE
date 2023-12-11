@@ -57,7 +57,7 @@ const PostsItemContent = styled.h5`
   color: rgb(95, 102, 107);
   line-height: 1.3rem;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 `;

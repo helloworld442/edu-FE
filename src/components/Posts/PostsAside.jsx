@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import PostsBanner from "./PostBanner";
 import { device } from "../../utils/media";
+import Carosel from "../Carosel/Carosel";
 
 export default function PostsAside() {
   return (
     <StPostsAside>
-      <PostsBanner />
+      <Carosel />
     </StPostsAside>
   );
 }
