@@ -13,7 +13,7 @@ export default function PostsItem({ post }) {
       </PostsItemUser>
       <PostsItemPoint>
         <span>0</span>
-        <h5>포인트</h5>
+        <h5>POINT</h5>
       </PostsItemPoint>
     </StPostsItem>
   );
@@ -21,9 +21,9 @@ export default function PostsItem({ post }) {
 
 const StPostsItem = styled.li`
   position: relative;
-  width: 680px;
-  height: 200px;
-  padding: 36px 0;
+  width: 700px;
+  height: 190px;
+  padding: 30px 0;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(228, 235, 240);
 
@@ -39,7 +39,7 @@ const PostsItemTitle = styled.a`
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 550;
-  font-size: 16px;
+  font-size: 15px;
   color: rgb(20, 22, 23);
 
   &:hover {
@@ -53,9 +53,9 @@ const PostsItemContent = styled.h5`
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.825rem;
+  font-size: 0.75rem;
   color: rgb(95, 102, 107);
-  line-height: 1.3rem;
+  line-height: 1.2rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -64,7 +64,7 @@ const PostsItemContent = styled.h5`
 
 const PostsItemUser = styled.div`
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   display: flex;
   align-items: center;
 
@@ -99,8 +99,8 @@ const PostsItemPoint = styled.div`
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 110px;
-  height: 110px;
+  width: 105px;
+  height: 105px;
   border: 2px solid #e8e8e8;
   border-radius: 50%;
   font-weight: 300;
@@ -109,14 +109,16 @@ const PostsItemPoint = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 
   span {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: rgb(102, 103, 171, 0.8);
   }
 
   h5 {
-    font-size: 1rem;
+    font-size: 0.65rem;
+    font-weight: 650;
+    font-family: "Noto Sans KR";
   }
 `;

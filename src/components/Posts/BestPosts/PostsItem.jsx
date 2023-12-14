@@ -26,9 +26,9 @@ export default function PostsItem({ post, index }) {
 
 const StPostsItem = styled.li`
   position: relative;
-  width: 680px;
-  height: 210px;
-  padding: 36px 0;
+  width: 700px;
+  height: 190px;
+  padding: 30px 0;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(228, 235, 240);
 
@@ -50,11 +50,11 @@ const PostsItemId = styled.span`
 
 const PostsItemTitle = styled.a`
   width: 80%;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 550;
-  font-size: 16px;
+  font-size: 15px;
   color: rgb(20, 22, 23);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -72,9 +72,9 @@ const PostsItemContent = styled.h5`
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.825rem;
+  font-size: 0.75rem;
   color: rgb(95, 102, 107);
-  line-height: 1.3rem;
+  line-height: 1.2rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -83,7 +83,7 @@ const PostsItemContent = styled.h5`
 
 const PostsItemUser = styled.div`
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   display: flex;
   align-items: center;
 
@@ -115,7 +115,7 @@ const PostsItemUser = styled.div`
 
 const PostsItemInfo = styled.div`
   position: absolute;
-  bottom: 36px;
+  bottom: 40px;
   right: 0;
   display: flex;
   align-items: center;

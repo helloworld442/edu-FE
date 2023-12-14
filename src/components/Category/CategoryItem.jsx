@@ -15,7 +15,7 @@ export default function CategoryItem({ category }) {
 
 const StCategoryItem = styled.li`
   width: 100%;
-  height: 230px;
+  height: 240px;
   padding: 36px 24px;
   box-sizing: border-box;
   border-radius: 18px;

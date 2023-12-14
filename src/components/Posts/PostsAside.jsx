@@ -11,7 +11,7 @@ export default function PostsAside() {
 }
 
 const StPostsAside = styled.aside`
-  width: 280px;
+  width: 310px;
 
   @media ${device.tablet} {
     width: 100%;

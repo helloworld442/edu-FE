@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { device } from "../utils/media";
-import Header from "../components/@common/Header";
+import MainHeader from "../components/Header/MainHeader";
 
 export default function CategoryLayout({ children }) {
   return (
     <Layout>
-      <Header />
+      <MainHeader />
       {children}
     </Layout>
   );
@@ -14,10 +14,8 @@ export default function CategoryLayout({ children }) {
 const Layout = styled.div`
   position: relative;
   left: 50%;
-  width: 1100px;
+  max-width: 1078px;
   height: auto;
-  padding: 0 36px;
-  box-sizing: border-box;
   transform: translateX(-50%);
 
   @media ${device.tablet} {

@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { ReactComponent as User } from "../../assets/user-regular.svg";
-import { useLocation } from "react-router-dom";
+import usePathname from "../../hooks/usePathname";
 
-export default function Header() {
-  const { pathname } = useLocation();
-  const [getActive, getRoutes] = usePathname(pathname);
+export default function MainHeader() {
+  const [getActive, getRoutes] = usePathname();
 
   return (
     <StHeader>
@@ -18,8 +17,8 @@ export default function Header() {
           <a href="/write" className={getActive("/write")}>
             글 남기기
           </a>
-          <a>소개글</a>
-          <a>문의하기</a>
+          <a onClick={() => alert("아직 완성되지 않는 기능입니다")}>블로그</a>
+          <a href="https://discord.gg/RnD7HP6wQD">F & A</a>
         </HeaderMenu>
 
         <HeaderIcon href="/user/signin">
@@ -30,30 +29,6 @@ export default function Header() {
       <HeaderPath>{getRoutes()}</HeaderPath>
     </StHeader>
   );
-}
-
-function usePathname(pathname) {
-  const getActive = (target) => {
-    if (pathname === target) return "active";
-
-    return "";
-  };
-
-  const getRoutes = () => {
-    if (pathname.includes("category")) {
-      return "홈  >  카테고리";
-    }
-
-    if (pathname.includes("posts")) {
-      return "홈  >  카테고리  >  커뮤니티";
-    }
-
-    if (pathname.includes("write")) {
-      return "홈  >  글 남기기";
-    }
-  };
-
-  return [getActive, getRoutes];
 }
 
 const StHeader = styled.header`

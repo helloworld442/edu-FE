@@ -17,5 +17,4 @@ export default function PostsList() {
 const StPostList = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 14px;
 `;

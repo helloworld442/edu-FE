@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { device } from "../utils/media";
-import Header from "../components/@common/Header";
+import PostHeader from "../components/Header/PostHeader";
 
 export default function PostLayout({ children }) {
   return (
     <Layout>
-      <Header />
+      <PostHeader />
       {children}
     </Layout>
   );
@@ -14,10 +14,8 @@ export default function PostLayout({ children }) {
 const Layout = styled.div`
   position: relative;
   left: 50%;
-  width: 1150px;
+  width: 100%;
   height: auto;
-  padding: 0 36px;
-  box-sizing: border-box;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { device } from "../utils/media";
 import { Outlet } from "react-router-dom";
-import Header from "../components/@common/Header";
+import AuthHeader from "../components/Header/AuthHeader";
 
 export default function AuthLayout() {
   return (
     <Layout>
-      <Header />
+      <AuthHeader />
       <Outlet />
     </Layout>
   );
@@ -15,7 +15,7 @@ export default function AuthLayout() {
 const Layout = styled.div`
   position: relative;
   left: 50%;
-  width: 1150px;
+  width: 100%;
   height: auto;
   padding: 0 36px;
   box-sizing: border-box;

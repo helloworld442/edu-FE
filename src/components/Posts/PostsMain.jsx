@@ -15,7 +15,7 @@ export default function PostsMain() {
 }
 
 const StPostsMain = styled.div`
-  width: 680px;
+  width: 700px;
 
   @media ${device.tablet} {
     width: 100%;

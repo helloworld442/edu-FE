@@ -45,7 +45,7 @@ export default function QuestionTitle({ post }) {
 const QuestionPostTitle = styled.input`
   width: 600px;
   box-sizing: border-box;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
   font-family: "Noto Sans KR";
 
