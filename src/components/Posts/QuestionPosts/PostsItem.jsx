@@ -101,7 +101,7 @@ const PostsItemPoint = styled.div`
   transform: translateY(-50%);
   width: 105px;
   height: 105px;
-  border: 2px solid #e8e8e8;
+  border: 2px solid #e1e7eb;
   border-radius: 50%;
   font-weight: 300;
   color: #333;

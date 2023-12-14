@@ -107,7 +107,7 @@ const CommentItemCode = styled.pre`
   .numbering {
     margin-right: 12px;
     font-size: 0.85rem;
-    font-weight: 550;
+    font-weight: 500;
     font-style: normal;
     font-family: monospace;
   }

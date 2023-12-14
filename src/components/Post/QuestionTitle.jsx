@@ -63,9 +63,9 @@ const QuestionPostTitle = styled.input`
   }
 
   &:enabled {
+    margin-bottom: 3px;
     border: 1px solid #d7e0e6;
-    border-radius: 2px;
-    outline: 2px solid rgb(102, 103, 171, 1);
+    outline: 3px dashed rgb(102, 103, 171, 1);
     background: #fefefe;
     color: #444;
   }
