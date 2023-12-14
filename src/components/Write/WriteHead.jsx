@@ -15,8 +15,7 @@ export default function WriteHead() {
 }
 
 const StWriteHead = styled.div`
-  margin-top: 12px;
-  margin-bottom: 36px;
+  margin: 36px 0;
 `;
 
 const WriteHeadTitle = styled.h1`
