@@ -69,25 +69,30 @@ function QuestionPost({ post }) {
 }
 
 const StQuestionDesc = styled.div`
-  margin: 48px 0;
+  margin-bottom: 18px;
 `;
 
 const QuestionDescTitle = styled.h3`
   display: inline-block;
-  margin-bottom: 12px;
-  font-size: 1.35rem;
-  font-weight: 300;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  font-family: "Noto Sans KR";
+  font-weight: 550;
   color: rgb(102, 103, 171, 1);
 `;
 
 const QuestionDescContent = styled.textarea`
   width: 100%;
   box-sizing: border-box;
-  font-size: 0.95rem;
-  font-weight: 550;
+  font-size: 0.875rem;
+  font-weight: 500;
   font-family: "Noto Sans KR";
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   resize: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &:disabled {
     border: none;
@@ -106,9 +111,11 @@ const QuestionDescContent = styled.textarea`
 `;
 
 const QuestionPostPen = styled(PenSquare)`
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-left: 18px;
+  position: relative;
+  top: 1px;
+  width: 0.95rem;
+  height: 0.95rem;
+  margin-left: 12px;
   fill: #888;
   cursor: pointer;
 

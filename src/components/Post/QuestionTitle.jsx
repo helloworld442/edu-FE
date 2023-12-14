@@ -16,7 +16,7 @@ export default function QuestionTitle({ post }) {
   const [disabled, onClick, onKeyDown] = useToggle({ trigger: onUpdateValue });
 
   return (
-    <>
+    <StQuestionTitle>
       <QuestionPostTitle
         type="text"
         name="title"
@@ -26,10 +26,6 @@ export default function QuestionTitle({ post }) {
         onKeyDown={onKeyDown}
       />
 
-      {disabled && <QuestionPostPen onClick={onClick} />}
-
-      <PostModal trigger={<QuestionPostEllipsis />} onTrigger={onDeleteValue} />
-
       <QuestionPostView>
         <h6>
           추천 <span>{post.heartCount}</span>
@@ -38,15 +34,25 @@ export default function QuestionTitle({ post }) {
           조회 <span>{post.views}</span>
         </h6>
       </QuestionPostView>
-    </>
+
+      {disabled && <QuestionPostPen onClick={onClick} />}
+
+      <PostModal trigger={<QuestionPostEllipsis />} onTrigger={onDeleteValue} />
+    </StQuestionTitle>
   );
 }
 
+const StQuestionTitle = styled.div`
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e1e7eb;
+`;
+
 const QuestionPostTitle = styled.input`
-  width: 600px;
+  width: 650px;
+  margin-top: 3px;
   box-sizing: border-box;
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 550;
   font-family: "Noto Sans KR";
 
   &:disabled {
@@ -89,9 +95,8 @@ const QuestionPostEllipsis = styled(Ellipsis)`
 `;
 
 const QuestionPostView = styled.div`
-  padding: 20px 0;
-  margin-bottom: 36px;
-  border-bottom: 2px solid #e8e8e8;
+  padding-top: 8px;
+  padding-bottom: 20px;
   display: flex;
   gap: 8px;
 

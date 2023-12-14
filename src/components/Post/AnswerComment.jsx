@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis-vertical-solid.svg";
-import "highlight.js/styles/atom-one-light.min.css";
+import "highlight.js/styles/github.min.css";
 import useHightlightCode from "../../hooks/useHightLightCode";
 
 export default function AnswerComments() {
@@ -98,16 +98,15 @@ const CommentItemCode = styled.pre`
   padding: 12px;
   box-sizing: border-box;
   border-radius: 6px;
-  font-size: 0.925rem;
+  font-size: 0.825rem;
   font-weight: 400;
   font-family: monospace;
-  font-style: italic;
   color: #888;
-  background: rgb(247, 246, 243);
+  background: #eceff1;
 
   .numbering {
     margin-right: 12px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 550;
     font-style: normal;
     font-family: monospace;

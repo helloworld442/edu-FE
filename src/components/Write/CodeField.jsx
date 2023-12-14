@@ -67,7 +67,7 @@ const CodeFieldBox = styled.div`
   overflow-y: scroll;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none;
-  background: rgb(247, 246, 243);
+  background: #eceff1;
 
   &::-webkit-scrollbar {
     display: none;
@@ -78,17 +78,17 @@ const CodeTextArea = styled.textarea`
   position: absolute;
   right: 0;
   width: 95%;
-  padding: 14px 12px;
+  padding: 18px 12px;
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   font-family: monospace;
   color: transparent;
   background: transparent;
   caret-color: #333;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
   resize: none;
   z-index: 1;
   white-space: pre-wrap;
@@ -102,7 +102,7 @@ const CodeArea = styled.div`
   min-height: 100%;
   border: none;
   outline: none;
-  background: rgb(247, 246, 243);
+  background: #eceff1;
   font-size: 1rem;
   font-weight: 400;
   font-family: monospace;
@@ -114,35 +114,36 @@ const CodeArea = styled.div`
     position: absolute;
     left: 0;
     width: 5%;
-    padding: 14px 0;
+    padding: 18px 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 400;
     font-family: monospace;
     color: #888;
-    background: rgb(247, 246, 243);
+    background: #eceff1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     white-space: pre-wrap;
     overflow-y: hidden;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
   }
 
   .code-core {
     position: absolute;
     right: 0;
     width: 95%;
-    padding: 14px 12px;
+    padding: 18px 12px;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     font-family: monospace;
     color: #333;
     caret-color: #333;
     white-space: pre-wrap;
     overflow-y: hidden;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.4px;
   }
 `;

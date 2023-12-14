@@ -17,7 +17,7 @@ export default function QuestionInfo({ post }) {
 }
 
 const QuestionPostInfo = styled.div`
-  margin-top: 20px;
+  margin-top: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;

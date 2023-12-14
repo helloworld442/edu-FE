@@ -4,7 +4,7 @@ import InputField from "./InputField";
 import TextAreaField from "./TextAreaField";
 import Button from "../@common/Button";
 import useInput from "../../hooks/useInput";
-import "highlight.js/styles/atom-one-light.min.css";
+import "highlight.js/styles/github.min.css";
 import { useMutation, useQueryClient } from "react-query";
 import { createReview } from "../../apis/review";
 
