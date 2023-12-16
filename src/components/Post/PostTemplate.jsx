@@ -7,7 +7,7 @@ export default function PostTemplate({ children }) {
 
 const StPostTemplate = styled.main`
   width: 1078px;
-  margin-top: 36px;
+  margin-top: 24px;
 
   @media ${device.tablet} {
     width: 100%;

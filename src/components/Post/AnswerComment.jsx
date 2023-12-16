@@ -49,15 +49,13 @@ function AnswerComment() {
 
 const AnswerCommentMenu = styled.ul`
   width: 100%;
-  margin: 36px 0;
 `;
 
 const AnswerCommentItem = styled.li`
   position: relative;
   width: 100%;
-  min-height: 200px;
-  padding: 18px 12px;
-  margin: 24px 0;
+  min-height: 180px;
+  padding: 18px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #d7e0e6;
   border-radius: 6px;
@@ -97,7 +95,6 @@ const CommentItemCode = styled.pre`
   display: inline;
   padding: 12px;
   box-sizing: border-box;
-  border-radius: 6px;
   font-size: 0.825rem;
   font-weight: 400;
   font-family: monospace;
@@ -114,8 +111,8 @@ const CommentItemCode = styled.pre`
 `;
 
 const CommentItemContent = styled.h3`
-  margin-top: 30px;
-  font-size: 0.925rem;
+  margin-top: 24px;
+  font-size: 0.85rem;
   font-weight: 500;
   font-family: "Noto Sans KR";
   color: #444;
@@ -124,7 +121,7 @@ const CommentItemContent = styled.h3`
 const CommentItemEllipsis = styled(Ellipsis)`
   position: absolute;
   top: 20px;
-  right: 12px;
+  right: 0;
   width: 1.15rem;
   height: 1.15rem;
   fill: rgb(102, 103, 171, 1);
@@ -133,11 +130,11 @@ const CommentItemEllipsis = styled(Ellipsis)`
 const CommentItemLike = styled.span`
   position: absolute;
   bottom: 18px;
-  right: 12px;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid #e8e8e8;
   border-radius: 4px;

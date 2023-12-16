@@ -35,7 +35,7 @@ const AnswerForm = () => {
 
 const AnswerFormBox = styled.div`
   width: 100%;
-  margin: 36px 0;
+  margin: 12px 0;
 `;
 
 const StAnswerForm = styled.form`

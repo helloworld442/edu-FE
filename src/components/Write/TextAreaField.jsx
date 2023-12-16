@@ -39,7 +39,7 @@ const TextAreaFieldLabel = styled.label`
 `;
 
 const TextAreaFieldTextArea = styled.textarea`
-  height: 350px;
+  height: 400px;
   padding: 0 18px;
   border-radius: 4px;
   border: 2px solid #d7e0e6;
