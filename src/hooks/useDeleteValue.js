@@ -7,7 +7,17 @@ export default function useDeleteValue() {
   const queryClient = useQueryClient();
 
   const deleteMutation = useMutation(deleteReview, {
-    onSuccess: () => {
+    onMutate: async () => {
+      await queryClient.cancelQueries(["reviews", postId]);
+
+      queryClient.removeQueries(["reviews", postId]);
+    },
+
+    onError: (error) => {
+      queryClient.resetQueries(["reviews", postId]);
+    },
+
+    onSettled: () => {
       queryClient.invalidateQueries("reviews");
     },
   });
