@@ -7,7 +7,21 @@ export default function useUpdateHeart() {
   const queryClient = useQueryClient();
 
   const heartMutation = useMutation(createHeart, {
-    onSuccess: () => {
+    onMutate: async (newPost) => {
+      await queryClient.cancelQueries(["reviews", postId]);
+
+      const previousPost = queryClient.getQueryData(["reviews", postId]);
+
+      queryClient.setQueryData(["reviews", postId], newPost.req);
+
+      return { previousPost };
+    },
+
+    onError: (error, _, context) => {
+      queryClient.setQueryData(["reviews", postId], context.previousPost);
+    },
+
+    onSettled: () => {
       queryClient.invalidateQueries("reviews");
     },
   });

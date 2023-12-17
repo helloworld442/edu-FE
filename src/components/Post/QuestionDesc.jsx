@@ -85,7 +85,7 @@ const QuestionDescContent = styled.textarea`
   width: 100%;
   box-sizing: border-box;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 450;
   font-family: "Noto Sans KR";
   line-height: 1.7rem;
   resize: none;

@@ -9,7 +9,7 @@ export default function Carosel() {
     <>
       <StCarosel>
         <CaroselMenu>
-          <CaroselItem page={page} background="rgb(80, 119, 96)" color="#fff">
+          <CaroselItem page={page} background="#98c1ae" color="#1a3834">
             <CaroselTitle>
               코드 리뷰 커뮤니티 별무리
               <br />
@@ -20,7 +20,7 @@ export default function Carosel() {
             </CaroselIntro>
           </CaroselItem>
 
-          <CaroselItem page={page} background="rgb(117, 118, 175)" color="#fff">
+          <CaroselItem page={page} background="#f9f7e8" color="#61bfad">
             <CaroselTitle>
               코드 리뷰 커뮤니티 인기글
               <br />
@@ -31,7 +31,7 @@ export default function Carosel() {
             </CaroselIntro>
           </CaroselItem>
 
-          <CaroselItem page={page} background="rgb(248, 224, 220)" color="#555">
+          <CaroselItem page={page} background="#e3e3e3" color="#a28276">
             <CaroselTitle>
               코드 리뷰 커뮤니티 Q & A
               <br />
