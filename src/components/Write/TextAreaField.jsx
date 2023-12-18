@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function TextAreaField({ label, ...rest }) {
+export default function TextAreaField({ label, error, ...rest }) {
   return (
     <StTextAreaField>
       <TextAreaFieldLabel>
@@ -8,6 +8,7 @@ export default function TextAreaField({ label, ...rest }) {
         <b>*</b>
       </TextAreaFieldLabel>
       <TextAreaFieldTextArea {...rest} />
+      <TextAreaFieldError>{error}</TextAreaFieldError>
     </StTextAreaField>
   );
 }
@@ -22,7 +23,7 @@ const TextAreaFieldLabel = styled.label`
   margin-bottom: 12px;
   font-size: 1.35rem;
   font-weight: 300;
-  color: #666;
+  color: #333;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -39,19 +40,25 @@ const TextAreaFieldLabel = styled.label`
 `;
 
 const TextAreaFieldTextArea = styled.textarea`
-  height: 400px;
-  padding: 0 18px;
-  border-radius: 4px;
-  border: 2px solid #d7e0e6;
+  height: 350px;
+  padding: 12px 16px;
+  border-radius: 2px;
+  border: 1px solid #d7e0e6;
   outline: none;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 500;
   font-family: "Noto Sans KR";
   color: #333;
-  line-height: 60px;
   resize: none;
 
   &::placeholder {
     color: rgb(157, 167, 174);
   }
+`;
+
+const TextAreaFieldError = styled.h5`
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: red;
 `;

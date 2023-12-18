@@ -61,8 +61,8 @@ const CodeFieldBox = styled.div`
   position: relative;
   width: 100%;
   min-height: 400px;
-  border: 2px solid #d7e0e6;
-  border-radius: 4px;
+  border: 1px solid #d7e0e6;
+  border-radius: 2px;
   box-sizing: border-box;
   overflow-y: scroll;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */

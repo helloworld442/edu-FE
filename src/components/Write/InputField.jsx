@@ -22,7 +22,7 @@ const InputFieldLabel = styled.label`
   margin-bottom: 12px;
   font-size: 1.35rem;
   font-weight: 300;
-  color: #666;
+  color: #333;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -34,12 +34,14 @@ const InputFieldLabel = styled.label`
 `;
 
 const InputFieldInput = styled.input`
+  width: 100%;
   height: 56px;
   padding: 0 18px;
-  border-radius: 4px;
-  border: 2px solid #d7e0e6;
+  border-radius: 2px;
+  border: 1px solid #d7e0e6;
+  box-sizing: border-box;
   outline: none;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 500;
   font-family: "Noto Sans KR";
   color: #333;

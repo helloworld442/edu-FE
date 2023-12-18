@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../utils/media";
 import PostQuestion from "./PostQuestion";
-import PostAnswer from "./PostAnswer";
+import PostComments from "./PostComments";
 import { Suspense } from "react";
 
 export default function PostDetail() {
@@ -9,7 +9,7 @@ export default function PostDetail() {
     <Suspense fallback={<div>asdf</div>}>
       <StPostDetail>
         <PostQuestion />
-        <PostAnswer />
+        <PostComments />
       </StPostDetail>
     </Suspense>
   );

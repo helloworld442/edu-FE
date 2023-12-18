@@ -11,8 +11,8 @@ import { createReview } from "../../apis/review";
 export default function WriteForm() {
   const queryClient = useQueryClient();
   const [form, onChange, refresh] = useInput({
-    title: "",
     code: "",
+    title: "",
     problem: "",
     question: "",
     category: ["spring", "java"],
@@ -47,15 +47,7 @@ export default function WriteForm() {
         name="code"
         value={form.code}
         onChange={onChange}
-        placeholder="코드를 입력해주세요"
-      />
-
-      <TextAreaField
-        label="문제상황"
-        name="problem"
-        value={form.problem}
-        onChange={onChange}
-        placeholder="문제상황을 입력해주세요"
+        placeholder="내용을 입력해주세요"
       />
 
       <TextAreaField
@@ -64,6 +56,14 @@ export default function WriteForm() {
         value={form.question}
         onChange={onChange}
         placeholder="궁금한점을 입력해주세요"
+      />
+
+      <TextAreaField
+        label="문제상황"
+        name="problem"
+        value={form.problem}
+        onChange={onChange}
+        placeholder="문제상황을 입력해주세요"
       />
 
       <WriteFormButtons>
