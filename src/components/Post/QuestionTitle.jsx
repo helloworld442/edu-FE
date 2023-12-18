@@ -35,7 +35,7 @@ export default function QuestionTitle({ post }) {
         </h6>
       </QuestionPostView>
 
-      {disabled && <QuestionPostPen onClick={onClick} />}
+      {/* {disabled && <QuestionPostPen onClick={onClick} />} */}
 
       <PostModal trigger={<QuestionPostEllipsis />} onTrigger={onDeleteValue} />
     </StQuestionTitle>

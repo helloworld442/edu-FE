@@ -9,12 +9,19 @@ export default function TextArea({ name, value, onChange, width, height }) {
     <StTextArea width={width} height={height}>
       <TextAreaToggle>
         <BoldIcon name={name} value={value} onChange={onChange} />
+
         <ItalicIcon name={name} value={value} onChange={onChange} />
+
         <TagIcon name={name} value={value} onChange={onChange} />
       </TextAreaToggle>
       <TextAreaContent>
         <ContentPreView dangerouslySetInnerHTML={{ __html: hightlightText }} />
-        <ContentTextArea name={name} value={value} onChange={onChange} />
+        <ContentTextArea
+          name={name}
+          value={value}
+          onChange={onChange}
+          spellCheck="false"
+        />
       </TextAreaContent>
     </StTextArea>
   );
@@ -73,8 +80,8 @@ const ContentTextArea = styled.textarea`
   color: transparent;
   background: transparent;
   caret-color: #333;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 400;
   font-family: "Noto Sans KR";
 `;
 
@@ -87,8 +94,8 @@ const ContentPreView = styled.pre`
   outline: none;
   z-index: 0;
   color: #333;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 400;
   font-family: "Noto Sans KR";
 
   .hgtext-tag {

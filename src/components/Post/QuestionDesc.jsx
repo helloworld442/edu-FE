@@ -27,7 +27,7 @@ function ProblemPost({ post }) {
   return (
     <StQuestionDesc>
       <QuestionDescTitle>문제상황</QuestionDescTitle>
-      {disabled && <QuestionPostPen onClick={onClick} />}
+      {/* {disabled && <QuestionPostPen onClick={onClick} />} */}
       <QuestionDescContent
         ref={textareaRef}
         type="text"
@@ -54,7 +54,7 @@ function QuestionPost({ post }) {
   return (
     <StQuestionDesc>
       <QuestionDescTitle>궁금한점</QuestionDescTitle>
-      {disabled && <QuestionPostPen onClick={onClick} />}
+      {/* {disabled && <QuestionPostPen onClick={onClick} />} */}
       <QuestionDescContent
         ref={textareaRef}
         type="text"

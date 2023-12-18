@@ -5,6 +5,7 @@ import TextArea from "../@common/TextArea";
 
 export default function PostCommentForm() {
   const [form, onChange, refresh] = useInput({ content: "" });
+
   return (
     <StPostCommentForm>
       <TextArea
@@ -50,6 +51,10 @@ const CommnetFormButton = styled.button`
     margin-right: 12px;
     width: 0.95rem;
     height: 0.95rem;
+  }
+
+  &:hover {
+    opacity: 0.9;
   }
 
   ${(props) =>
