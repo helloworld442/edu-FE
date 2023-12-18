@@ -11,7 +11,7 @@ export default function MainHeader() {
         <HeaderLogo href="/">별무리</HeaderLogo>
 
         <HeaderMenu>
-          <a href="/category" className={getActive("/category")}>
+          <a href="/" className={getActive("/")}>
             카테고리
           </a>
           <a href="/write" className={getActive("/write")}>

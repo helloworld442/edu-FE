@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export default function AuthHeader() {
+export default function ErrorHeader() {
   return (
     <StHeader>
       <HeaderNav>
@@ -10,6 +10,9 @@ export default function AuthHeader() {
           <HeaderItem href="/write">글 남기기</HeaderItem>
           <HeaderItem>블로그</HeaderItem>
           <HeaderItem href="https://discord.gg/RnD7HP6wQD">F & A</HeaderItem>
+          <HeaderItem $primary href="/user/signin">
+            로그인
+          </HeaderItem>
         </HeaderMenu>
       </HeaderNav>
     </StHeader>
@@ -56,4 +59,21 @@ const HeaderItem = styled.a`
   &:hover {
     background: rgb(242, 246, 248);
   }
+
+  ${(props) =>
+    props.$primary &&
+    css`
+      padding: 8px 14px;
+      margin-left: 24px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid rgb(102, 103, 171, 0.8);
+      color: rgb(102, 103, 171, 1);
+
+      &:hover {
+        background: none;
+        cursor: pointer;
+      }
+    `}
 `;

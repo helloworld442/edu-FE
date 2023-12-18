@@ -6,7 +6,7 @@ export default function PostHeader() {
       <HeaderNav>
         <HeaderLogo>별무리</HeaderLogo>
         <HeaderMenu>
-          <HeaderItem href="/category">카테고리</HeaderItem>
+          <HeaderItem href="/">카테고리</HeaderItem>
           <HeaderItem href="/write">글 남기기</HeaderItem>
           <HeaderItem>블로그</HeaderItem>
           <HeaderItem href="https://discord.gg/RnD7HP6wQD">F & A</HeaderItem>

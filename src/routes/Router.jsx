@@ -9,10 +9,11 @@ import AuthLayout from "../layout/AuthLayout";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import PostPage from "../pages/PostPage";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
-    path: "/category",
+    path: "/",
     element: <CategoryPage />,
   },
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/post/:postId",
     element: <PostPage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/user/",
@@ -41,6 +43,7 @@ const router = createBrowserRouter([
   {
     path: "/posts/",
     element: <PostsLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: ":categoryId",
@@ -55,6 +58,11 @@ const router = createBrowserRouter([
         element: <QuestionPostsPage />,
       },
     ],
+  },
+
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 
