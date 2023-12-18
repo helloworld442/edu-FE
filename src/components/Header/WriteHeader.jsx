@@ -23,7 +23,7 @@ const StHeader = styled.header`
 `;
 
 const HeaderNav = styled.nav`
-  width: 1078px;
+  width: 1150px;
   height: 60px;
   display: flex;
   justify-content: space-between;

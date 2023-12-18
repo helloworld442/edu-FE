@@ -2,25 +2,40 @@ import styled from "styled-components";
 import { ReactComponent as Pen } from "../../assets/pen-solid.svg";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import useUpdateHeart from "../../hooks/useUpdateHeart";
+import { useState } from "react";
+import PostCommentForm from "./PostCommentForm";
 
 export default function QuestionInfo({ post }) {
   const onUpdateHeart = useUpdateHeart();
+  const [active, onToggleWrite] = useCommentActive();
 
   return (
-    <QuestionPostInfo>
-      <PostInfoDate>
-        {new Date(post.createdAt).toLocaleDateString("ko-KR")}
-      </PostInfoDate>
-      <PostInfoHeart onClick={onUpdateHeart}>
-        <Heart />
-        저도 궁금해요 {post.heartCount}
-      </PostInfoHeart>
-      <PostInfoWrite>
-        <Pen />
-        답변하기
-      </PostInfoWrite>
-    </QuestionPostInfo>
+    <>
+      <QuestionPostInfo>
+        <PostInfoDate>
+          {new Date(post.createdAt).toLocaleDateString("ko-KR")}
+        </PostInfoDate>
+        <PostInfoHeart onClick={onUpdateHeart}>
+          <Heart />
+          저도 궁금해요 {post.heartCount}
+        </PostInfoHeart>
+        <PostInfoWrite onClick={onToggleWrite}>
+          <Pen />
+          답변하기
+        </PostInfoWrite>
+      </QuestionPostInfo>
+
+      {active && <PostCommentForm />}
+    </>
   );
+}
+
+function useCommentActive() {
+  const [active, setActive] = useState(false);
+
+  const onToggleWrite = () => setActive(!active);
+
+  return [active, onToggleWrite];
 }
 
 const QuestionPostInfo = styled.div`
@@ -75,7 +90,7 @@ const PostInfoWrite = styled.a`
   display: flex;
   align-items: center;
   font-family: "Noto Sans KR";
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: #fff;
   background: rgb(102, 103, 171, 0.8);
   cursor: pointer;
