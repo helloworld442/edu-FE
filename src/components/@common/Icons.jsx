@@ -43,11 +43,6 @@ function useHightLightInput({ name, value, onChange, action }) {
     e.target.name = name;
 
     switch (action) {
-      case "TAG":
-        !active
-          ? (e.target.value = "#" + value)
-          : (e.target.value = value.replaceAll("#", ""));
-        break;
       case "BOLD":
         !active
           ? (e.target.value = "**" + value + "**")
@@ -57,6 +52,12 @@ function useHightLightInput({ name, value, onChange, action }) {
         !active
           ? (e.target.value = "~~" + value + "~~")
           : (e.target.value = value.replaceAll("~~", ""));
+        break;
+      case "TAG":
+        !active
+          ? (e.target.value = "#" + value)
+          : (e.target.value = value.replaceAll("#", ""));
+        break;
     }
 
     onChange(e);

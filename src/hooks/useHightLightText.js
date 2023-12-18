@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function useHightLightText(value) {
   const [hightlightText, setHightlightText] = useState(value);
 
-  const TAG_REGEX = /#(.*)/g;
+  const TAG_REGEX = /#(\w+)/g;
   const BOLD_REGEX = /\*\*(.*)\*\*/g;
   const ITALIC_REGEX = /\~\~(.*)\~\~/g;
 

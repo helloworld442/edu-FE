@@ -41,6 +41,7 @@ const CommnetFormButton = styled.button`
   font-size: 0.9rem;
   font-weight: 500;
   color: #fff;
+  fill: #fff;
   background: rgb(102, 103, 171, 0.8);
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -49,7 +50,6 @@ const CommnetFormButton = styled.button`
     margin-right: 12px;
     width: 0.95rem;
     height: 0.95rem;
-    fill: #fff;
   }
 
   ${(props) =>
@@ -58,5 +58,6 @@ const CommnetFormButton = styled.button`
       border: 1px solid #e1e3e7;
       background: #f7f7f8;
       color: #aaacb0;
+      fill: #aaacb0;
     `}
 `;
