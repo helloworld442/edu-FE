@@ -57,7 +57,7 @@ const StCarosel = styled.div`
   width: 100%;
   height: 360px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 4px;
 
   @media ${device.tablet} {
     height: 230px;

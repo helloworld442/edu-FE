@@ -20,7 +20,7 @@ export default function PostComment() {
       </CommnetContent>
       <CommentHeart>
         <Heart />
-        좋아요 0
+        도움이 됐어요
       </CommentHeart>
     </StPostComment>
   );

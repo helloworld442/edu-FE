@@ -17,8 +17,8 @@ export default function PostList() {
 }
 
 const StPostList = styled.ul`
-  width: 340px;
-  margin-top: 10px;
+  width: 300px;
+  margin: 12px 0;
 
   @media ${device.tablet} {
     width: 100%;

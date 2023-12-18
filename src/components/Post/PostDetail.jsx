@@ -16,7 +16,7 @@ export default function PostDetail() {
 }
 
 const StPostDetail = styled.div`
-  width: 720px;
+  width: 750px;
   float: left;
 
   @media ${device.tablet} {

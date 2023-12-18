@@ -13,7 +13,7 @@ export default function QuestionInfo({ post }) {
       </PostInfoDate>
       <PostInfoHeart onClick={onUpdateHeart}>
         <Heart />
-        나도 궁금해요 {post.heartCount}
+        저도 궁금해요 {post.heartCount}
       </PostInfoHeart>
       <PostInfoWrite>
         <Pen />
