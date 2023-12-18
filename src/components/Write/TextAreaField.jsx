@@ -41,7 +41,7 @@ const TextAreaFieldLabel = styled.label`
 
 const TextAreaFieldTextArea = styled.textarea`
   height: 350px;
-  padding: 12px 16px;
+  padding: 16px;
   border-radius: 2px;
   border: 1px solid #d7e0e6;
   outline: none;
