@@ -38,7 +38,7 @@ const StPostComments = styled.ul`
   margin: 36px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
 `;
 
 const PostCommentTitle = styled.h2`

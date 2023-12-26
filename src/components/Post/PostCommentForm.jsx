@@ -2,12 +2,46 @@ import styled, { css } from "styled-components";
 import { ReactComponent as Pen } from "../../assets/pen-solid.svg";
 import useInput from "../../hooks/useInput";
 import TextArea from "../@common/TextArea";
+import { useMutation, useQueryClient } from "react-query";
+import { createComment } from "../../apis/comment";
+import { useParams } from "react-router-dom";
 
 export default function PostCommentForm() {
   const [form, onChange, refresh] = useInput({ content: "" });
 
+  const { postId } = useParams();
+  const queryClient = useQueryClient();
+
+  const commentMutation = useMutation(createComment, {
+    onMutate: async (newComment) => {
+      await queryClient.cancelQueries(["comments", postId]);
+
+      const previousComment = queryClient.getQueryData(["comments", postId]);
+
+      queryClient.setQueryData(["comments", postId], newComment.req);
+
+      return { previousComment };
+    },
+
+    onError: (error, _, context) => {
+      queryClient.setQueryData(["comments", postId], context.previousComment);
+    },
+
+    onSettled: () => {
+      queryClient.invalidateQueries("comments");
+    },
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    commentMutation.mutate({ postId, req: form });
+
+    refresh();
+  };
+
   return (
-    <StPostCommentForm>
+    <StPostCommentForm onSubmit={onSubmit}>
       <TextArea
         name="content"
         value={form.content}
