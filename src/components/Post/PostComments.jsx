@@ -7,8 +7,6 @@ import { getComments } from "../../apis/comment";
 export default function PostComments() {
   const comments = useComments();
 
-  console.log(comments);
-
   return (
     <StPostComments>
       <PostCommentTitle>
