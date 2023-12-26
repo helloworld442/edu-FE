@@ -12,9 +12,13 @@ export default function useUpdateHeart() {
 
       const previousPost = queryClient.getQueryData(["reviews", postId]);
 
-      console.log(newPost);
-
-      queryClient.setQueryData(["reviews", postId], newPost.req);
+      queryClient.setQueryData(["reviews", postId], {
+        ...previousPost,
+        heartCheck: !previousPost.heartCheck,
+        heartCount: previousPost.heartCheck
+          ? previousPost.heartCount + 1
+          : previousPost.heartCount - 1,
+      });
 
       return { previousPost };
     },
