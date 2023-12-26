@@ -12,6 +12,8 @@ export default function useUpdateHeart() {
 
       const previousPost = queryClient.getQueryData(["reviews", postId]);
 
+      console.log(previousPost, newPost);
+
       queryClient.setQueryData(["reviews", postId], newPost.req);
 
       return { previousPost };
