@@ -25,7 +25,7 @@ export default function QuestionInfo({ post }) {
         </PostInfoWrite>
       </QuestionPostInfo>
 
-      {active && <PostCommentForm />}
+      {active && <PostCommentForm onToggle={onToggleWrite} />}
     </>
   );
 }
