@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis-vertical-solid.svg";
+import useUpdateHeart from "../../hooks/useUpdateHeart";
 
 export default function PostComment({ comment }) {
+  const onUpdateHeart = useUpdateHeart("comments");
+
   return (
     <StPostComment>
       <CommentUser>
@@ -14,7 +17,7 @@ export default function PostComment({ comment }) {
       </CommentUser>
       <CommentEllipsis />
       <CommnetContent>{comment.content}</CommnetContent>
-      <CommentHeart>
+      <CommentHeart $active={comment.heartCheck} onClick={onUpdateHeart}>
         <Heart />
         도움이 됐어요 {comment.heartCount}
       </CommentHeart>
@@ -87,6 +90,14 @@ const CommentHeart = styled.span`
   &:hover {
     opacity: 0.9;
   }
+
+  ${(props) =>
+    props.$active &&
+    css`
+      border: 1px solid rgb(102, 103, 171, 1);
+      color: rgb(102, 103, 171, 1);
+      fill: rgb(102, 103, 171, 1);
+    `}
 `;
 
 const CommnetContent = styled.pre`
