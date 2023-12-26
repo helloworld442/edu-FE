@@ -25,8 +25,8 @@ export default function PostComment({ comment }) {
 const StPostComment = styled.li`
   position: relative;
   width: 100%;
-  min-height: 240px;
-  padding: 30px 24px;
+  min-height: 210px;
+  padding: 26px 20px;
   box-sizing: border-box;
   border: 1px solid #d7e0e6;
   border-radius: 4px;
@@ -64,7 +64,7 @@ const CommentUser = styled.div`
 
 const CommentHeart = styled.span`
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 24px;
   padding: 12px;
   box-sizing: border-box;
