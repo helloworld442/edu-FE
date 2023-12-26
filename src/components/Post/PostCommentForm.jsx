@@ -45,8 +45,6 @@ export default function PostCommentForm({ onToggle }) {
     commentMutation.mutate({ postId, req: form });
 
     refresh();
-
-    onToggle();
   };
 
   return (
