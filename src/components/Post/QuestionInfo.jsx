@@ -85,14 +85,14 @@ const PostInfoWrite = styled.a`
   height: 46px;
   padding: 12px 14px;
   box-sizing: border-box;
-  border: 1px solid rgb(102, 103, 171, 0.8);
+  border: 1px solid rgb(102, 103, 171, 1);
   border-radius: 4px;
   display: flex;
   align-items: center;
   font-family: "Noto Sans KR";
   font-size: 0.875rem;
   color: #fff;
-  background: rgb(102, 103, 171, 0.8);
+  background: rgb(102, 103, 171, 1);
   cursor: pointer;
 
   svg {

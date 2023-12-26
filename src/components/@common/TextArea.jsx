@@ -72,6 +72,7 @@ const ContentTextArea = styled.textarea`
   width: 100%;
   height: 100%;
   padding: 12px 14px;
+  margin: 0;
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -89,12 +90,14 @@ const ContentPreView = styled.pre`
   width: 100%;
   height: 100%;
   padding: 12px 14px;
+  margin: 0;
   box-sizing: border-box;
   border: none;
   outline: none;
   z-index: 0;
   color: #333;
   font-size: 0.95rem;
+  caret-color: #333;
   font-weight: 400;
   font-family: "Noto Sans KR";
 
@@ -104,7 +107,7 @@ const ContentPreView = styled.pre`
   }
 
   .hgtext-bold {
-    font-weight: 650;
+    font-weight: 600;
   }
 
   .hgtext-italic {

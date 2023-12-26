@@ -43,7 +43,7 @@ const CommnetFormButton = styled.button`
   font-weight: 500;
   color: #fff;
   fill: #fff;
-  background: rgb(102, 103, 171, 0.8);
+  background: rgb(102, 103, 171, 1);
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 
@@ -60,6 +60,7 @@ const CommnetFormButton = styled.button`
   ${(props) =>
     props.$active &&
     css`
+      cursor: not-allowed;
       border: 1px solid #e1e3e7;
       background: #f7f7f8;
       color: #aaacb0;

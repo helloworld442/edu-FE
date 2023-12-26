@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/media";
 
 export default function AuthHeader() {
   return (
@@ -22,6 +23,12 @@ const StHeader = styled.header`
   display: flex;
   justify-content: center;
   border-bottom: 1px solid rgb(228, 235, 240);
+  background: #fff;
+
+  @media ${device.tablet} {
+    padding: 0 10vw;
+    box-sizing: border-box;
+  }
 `;
 
 const HeaderNav = styled.nav`

@@ -82,4 +82,81 @@ const AuthTimer = styled.div`
   }
 `;
 
-export { AuthInputBox, AuthInputLabel, AuthInput, AuthInputButton, AuthTimer };
+const AuthTitle = styled.h2`
+  margin: 36px 0;
+  font-size: 1.85rem;
+  font-weight: 650;
+  font-family: "Noto Sans KR";
+  color: #333;
+`;
+
+const AuthProgresses = styled.div`
+  margin: 12px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const AuthProgress = styled.span`
+  width: 64px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 1.05rem;
+    height: 1.05rem;
+    padding: 18px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    fill: #fff;
+  }
+
+  b {
+    font-size: 0.725rem;
+    font-weight: 550;
+    font-family: "Noto Sans KR";
+    color: #333;
+  }
+
+  &.actived {
+    svg {
+      background: rgb(102, 103, 171, 0.5);
+    }
+  }
+
+  &.active {
+    svg {
+      background: rgb(102, 103, 171, 1);
+    }
+  }
+
+  &.disabled {
+    svg {
+      fill: #333;
+      background: #fff;
+    }
+  }
+`;
+
+const AuthLine = styled.div`
+  width: 28px;
+  height: 1px;
+  margin-bottom: 18px;
+  background: #d7e0e6;
+`;
+
+export {
+  AuthInputBox,
+  AuthInputLabel,
+  AuthInput,
+  AuthInputButton,
+  AuthTimer,
+  AuthTitle,
+  AuthProgresses,
+  AuthProgress,
+  AuthLine,
+};
