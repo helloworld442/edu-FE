@@ -25,7 +25,7 @@ export default function PostComment({ comment }) {
 const StPostComment = styled.li`
   position: relative;
   width: 100%;
-  min-height: 210px;
+  min-height: 200px;
   padding: 26px 20px;
   box-sizing: border-box;
   border: 1px solid #d7e0e6;
