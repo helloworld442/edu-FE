@@ -83,6 +83,7 @@ const PostInfoHeart = styled.span`
     css`
       border: 1px solid rgb(102, 103, 171, 1);
       color: rgb(102, 103, 171, 1);
+      fill: rgb(102, 103, 171, 1);
     `}
 `;
 

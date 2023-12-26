@@ -21,5 +21,5 @@ const Layout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(249, 249, 249);
+  background: rgb(252, 252, 253);
 `;
