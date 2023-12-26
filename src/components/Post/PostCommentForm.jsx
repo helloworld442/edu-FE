@@ -18,7 +18,11 @@ export default function PostCommentForm() {
 
       const previousComment = queryClient.getQueryData(["comments", postId]);
 
-      queryClient.setQueryData(["comments", postId], newComment.req);
+      queryClient.setQueryData(["comments", postId], {
+        ...newComment.req,
+        heartCount: 0,
+        heartCheck: false,
+      });
 
       return { previousComment };
     },
