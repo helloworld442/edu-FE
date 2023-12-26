@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as Pen } from "../../assets/pen-solid.svg";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import useUpdateHeart from "../../hooks/useUpdateHeart";
@@ -15,7 +15,7 @@ export default function QuestionInfo({ post }) {
         <PostInfoDate>
           {new Date(post.createdAt).toLocaleDateString("ko-KR")}
         </PostInfoDate>
-        <PostInfoHeart onClick={onUpdateHeart}>
+        <PostInfoHeart $active={post.heartCheck} onClick={onUpdateHeart}>
           <Heart />
           저도 궁금해요 {post.heartCount}
         </PostInfoHeart>
@@ -77,6 +77,13 @@ const PostInfoHeart = styled.span`
   &:hover {
     background: rgb(187, 187, 187, 0.1);
   }
+
+  ${(props) =>
+    props.$active &&
+    css`
+      border: 1px solid rgb(102, 103, 171, 1);
+      color: rgb(102, 103, 171, 1);
+    `}
 `;
 
 const PostInfoWrite = styled.a`
