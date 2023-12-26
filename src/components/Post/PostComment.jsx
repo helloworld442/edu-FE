@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis-vertical-solid.svg";
 
-export default function PostComment() {
+export default function PostComment({ comment }) {
   return (
     <StPostComment>
       <CommentUser>
@@ -13,14 +13,10 @@ export default function PostComment() {
         </div>
       </CommentUser>
       <CommentEllipsis />
-      <CommnetContent>
-        보통 도커환경 만들어서 많이들 하시는 것 같더라고요~ 구글에 검색해보면
-        <br />
-        여러 시행착오를 통해 환경 구축하신분들 글 찾아보실 수 있을겁니다.
-      </CommnetContent>
+      <CommnetContent>{comment.content}</CommnetContent>
       <CommentHeart>
         <Heart />
-        도움이 됐어요
+        도움이 됐어요 {comment.heartCount}
       </CommentHeart>
     </StPostComment>
   );
