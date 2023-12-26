@@ -8,26 +8,7 @@ import { useParams } from "react-router-dom";
 
 export default function PostCommentForm({ onToggle }) {
   const [form, onChange, refresh] = useInput({ content: "" });
-  const onSubmit = useCreateComment(form, onToggle);
 
-  return (
-    <StPostCommentForm onSubmit={onSubmit}>
-      <TextArea
-        name="content"
-        value={form.content}
-        onChange={onChange}
-        width="100%"
-        height="250px"
-      />
-      <CommnetFormButton type="submit" $active={!form.content ? true : false}>
-        <Pen />
-        답변 동록하기
-      </CommnetFormButton>
-    </StPostCommentForm>
-  );
-}
-
-function useCreateComment(form, onToggle) {
   const { postId } = useParams();
   const queryClient = useQueryClient();
 
@@ -68,7 +49,21 @@ function useCreateComment(form, onToggle) {
     onToggle();
   };
 
-  return onSubmit;
+  return (
+    <StPostCommentForm onSubmit={onSubmit}>
+      <TextArea
+        name="content"
+        value={form.content}
+        onChange={onChange}
+        width="100%"
+        height="250px"
+      />
+      <CommnetFormButton type="submit" $active={!form.content ? true : false}>
+        <Pen />
+        답변 동록하기
+      </CommnetFormButton>
+    </StPostCommentForm>
+  );
 }
 
 const StPostCommentForm = styled.form`
