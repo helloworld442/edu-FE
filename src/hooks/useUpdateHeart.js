@@ -15,7 +15,7 @@ export default function useUpdateHeart() {
       queryClient.setQueryData(["reviews", postId], {
         ...previousPost,
         heartCheck: !previousPost.heartCheck,
-        heartCount: previousPost.heartCheck
+        heartCount: !previousPost.heartCheck
           ? previousPost.heartCount + 1
           : previousPost.heartCount - 1,
       });
