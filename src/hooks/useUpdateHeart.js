@@ -2,17 +2,17 @@ import { useMutation, useQueryClient } from "react-query";
 import { createHeart } from "../apis/review";
 import { useParams } from "react-router-dom";
 
-export default function useUpdateHeart() {
+export default function useUpdateHeart(queryKey) {
   const { postId } = useParams();
   const queryClient = useQueryClient();
 
   const heartMutation = useMutation(createHeart, {
     onMutate: async (newPost) => {
-      await queryClient.cancelQueries(["reviews", postId]);
+      await queryClient.cancelQueries([queryKey, postId]);
 
-      const previousPost = queryClient.getQueryData(["reviews", postId]);
+      const previousPost = queryClient.getQueryData([queryKey, postId]);
 
-      queryClient.setQueryData(["reviews", postId], {
+      queryClient.setQueryData([queryKey, postId], {
         ...previousPost,
         heartCheck: !previousPost.heartCheck,
         heartCount: !previousPost.heartCheck
@@ -24,11 +24,11 @@ export default function useUpdateHeart() {
     },
 
     onError: (error, _, context) => {
-      queryClient.setQueryData(["reviews", postId], context.previousPost);
+      queryClient.setQueryData([queryKey, postId], context.previousPost);
     },
 
     onSettled: () => {
-      queryClient.invalidateQueries("reviews");
+      queryClient.invalidateQueries(queryKey);
     },
   });
 
