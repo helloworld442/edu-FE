@@ -65,13 +65,13 @@ const PostInfoHeart = styled.span`
   font-family: "Noto Sans KR";
   font-size: 0.85rem;
   color: #bbb;
+  fill: #bbb;
   cursor: pointer;
 
   svg {
     margin-right: 12px;
     width: 1.25rem;
     height: 1.25rem;
-    fill: #bbb;
   }
 
   &:hover {
