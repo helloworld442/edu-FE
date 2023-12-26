@@ -75,7 +75,7 @@ const PostInfoHeart = styled.span`
   }
 
   &:hover {
-    background: rgb(187, 187, 187, 0.1);
+    opacity: 0.9;
   }
 
   ${(props) =>
