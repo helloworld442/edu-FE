@@ -26,6 +26,8 @@ export default function useDeleteValue() {
     e.preventDefault();
 
     deleteMutation.mutate(postId);
+
+    window.location.href = "/posts/5";
   };
 
   return onDeleteValue;

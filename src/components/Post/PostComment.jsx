@@ -1,11 +1,8 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis-vertical-solid.svg";
-import useUpdateHeart from "../../hooks/useUpdateHeart";
 
 export default function PostComment({ comment }) {
-  const onUpdateHeart = useUpdateHeart("comments");
-
   return (
     <StPostComment>
       <CommentUser>

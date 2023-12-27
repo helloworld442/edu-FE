@@ -12,4 +12,8 @@ const createComment = async ({ postId, req }) => {
   return response.data;
 };
 
-export { getComments, createComment };
+const updateHeart = async ({ commentId, postId }) => {
+  const response = await api.post(`/heart/comment/${commentId}/${postId}`);
+};
+
+export { getComments, createComment, updateHeart };

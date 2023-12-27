@@ -6,7 +6,7 @@ import { useState } from "react";
 import PostCommentForm from "./PostCommentForm";
 
 export default function QuestionInfo({ post }) {
-  const onUpdateHeart = useUpdateHeart("reviews");
+  const onUpdateHeart = useUpdateHeart();
   const [active, onToggleWrite] = useCommentActive();
 
   return (
