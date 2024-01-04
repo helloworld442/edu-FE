@@ -12,7 +12,7 @@ const createComment = async ({ postId, req }) => {
   return response.data;
 };
 
-const updateHeart = async ({ commentId, postId }) => {
+const updateHeart = async ({ postId, commentId }) => {
   const response = await api.post(`/heart/comment/${commentId}/${postId}`);
 
   return response.data;
