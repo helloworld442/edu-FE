@@ -12,8 +12,8 @@ export default function PostComments() {
       <PostCommentTitle>
         답변 <b>{comments.length}</b>
       </PostCommentTitle>
-      {comments.map((comment, i) => (
-        <PostComment key={i} comment={comment} />
+      {comments.map((comment) => (
+        <PostComment key={comment.commentId} comment={comment} />
       ))}
     </StPostComments>
   );
