@@ -13,16 +13,21 @@ export default function PostComment({ comment }) {
     onMutate: async () => {
       await queryClient.cancelQueries(["comments", postId]);
 
-      queryClient.setQueryData(["comments", postId], (old) => [
-        ...old,
-        {
-          ...comment,
-          heartCheck: !comment.heartCheck,
-          heartCount: !comment.heartCheck
-            ? comment.heartCount + 1
-            : comment.heartCount - 1,
-        },
-      ]);
+      queryClient.setQueryData(["comments", postId], (old) =>
+        old.map((item) => {
+          if (item.commentId === comment.commentId) {
+            return {
+              ...comment,
+              heartCheck: !comment.heartCheck,
+              heartCount: !comment.heartCheck
+                ? comment.heartCount + 1
+                : comment.heartCount - 1,
+            };
+          }
+
+          return item;
+        })
+      );
 
       return;
     },
