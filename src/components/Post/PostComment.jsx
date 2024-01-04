@@ -3,6 +3,7 @@ import { ReactComponent as Heart } from "../../assets/heart-solid.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis-vertical-solid.svg";
 import { useMutation, useQueryClient } from "react-query";
 import { updateHeart } from "../../apis/comment";
+import { useParams } from "react-router-dom";
 
 export default function PostComment({ comment }) {
   const { postId } = useParams();
